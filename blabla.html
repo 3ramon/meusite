@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="meusite.css">
+    <title>prova</title>
+</head>
+<body>
+    
+    <div id="foramodal" class="fmodal">
+        <center>
+            <div id="dentromodal" class="dmodal">
+                <span onclick="close_modal()">&times;</span>
+
+                <!-- parte escrita da pag de cadastro -->
+                <div class="intro">
+                <img src="logop.png" alt="">
+                <p>
+                    Seu desenho favorito não apareceu aqui ainda? <br>Faça o seu <b>cadastro</b>,nos envie o nome dele<br> e traremos várias curiosidades sobre ele!!
+                </p>
+                </div>
+
+
+                <div>
+                    <form id="formulario" onsubmit="enviar()">
+                        <label for="nome">
+                            Nome Completo: <br> <input class="innome" type="text" id="nome">
+                        </label><br>
+                   
+                        <label for="email">
+                            Email: <br> <input class="inemail" type="email" id="email">
+                        </label>
+
+                        <div id="alertanome" class="1aviso"></div>
+                        <div id="alertaemail" class="2aviso"></div>         
+                      
+                        <label for="senha">
+                         Senha: <br> <input class="insenha" type="password" id="senha">
+                        </label>
+
+                        <div id="alertasenha" class="3aviso"></div>
+                     
+                        <label for="rsenha">
+                          Repita a Senha: <br> <input class="input_rsenha" type="password" id="rsenha">
+                        </label>
+
+                        <div id="alertarsenha" class="4aviso">
+                        </div> 
+
+                        <input class="input_bnt" type="submit" value="Enviar">
+                    </form>
+
+                    
+                    <label for="">
+
+                    <input type="checkbox">
+                    Tenho interesse em receber mais curiosidades por E-mail
+                    </label>
+                </div>
+
+            </div>
+        </center>
+    </div>
+
+</body>
+</html>

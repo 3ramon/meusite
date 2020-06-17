@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream World</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="site.css">
+    <link rel="icon" href="./7472mickey.ico">
+</head>
+<body>
+    <div class="fundo">
+
+    <img src="logop.png" style="width: 80px; height: 60px;" class="lo">
+    
+
+    <div class="cabecalho">
+
+        <div class="container">
+            <div class="nav">
+                <ul>
+                    <il><a href="site.html">
+                    <il><a href="#"><b>Login</b></a></il>
+                    <il><a href="#"><b onclick="abridora()">Cadastre-se</b></a></il>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- abaixo as imagens de inicio -->
+
+
+
+
+
+    <div id="foramodal" class="fmodal" style="display: none;">
+        <center>
+            <div id="dentromodal" class="dmodal">
+                <span onclick="fechadora()" id="x">&times;</span>
+
+                <!-- ul é uma "div" para aparecer os erros na hr de se cadastrar -->
+                <ul id="espaco"></ul>
+
+                <!-- parte escrita da pag de cadastro -->
+                <div class="intro">
+                <img src="logop.png" alt="">
+                <p>
+                    Gostou do nosso conteudo? <br>Faça o seu <b>cadastro</b> e receba toda semana novidades sobre o site e mais curiosidades<br> 
+                </p>
+                </div>
+
+
+                <div>
+                    <form id="formulario">
+                        <label for="nome">
+                            Nome Completo: <br> <input class="innome" type="text" id="nome">
+                        </label><br>
+                   
+                        <label for="email">
+                            Email: <br> <input class="inemail" type="email" id="email">
+                        </label>
+
+                        <div id="alertanome" class="1aviso"></div>
+                        <div id="alertaemail" class="2aviso"></div>         
+                      
+                        <label for="senha">
+                         Senha: <br> <input class="insenha" type="password" id="senha">
+                        </label>
+
+                        <div id="alertasenha" class="3aviso"></div>
+
+                        <input class="input_bnt" onclick="enviar()" value="ENVIAR">
+
+                        
+                    </form>
+                </div>
+            </div>
+        </center>
+    </div>
+
+    <div>
+        Para todos os fãs da disney e dreamworks, o maior site de curiosidades o Brasil!!
+    </div>
+
+
+    <footer class="rodape"><img src="youtube.png" id="you"> <img src="instragram.png" id="insta"> <img src="twitter.png" id="twi"> 
+    </footer>
+    </div>
+
+</body>
+</html>
+
+<script>
+    var chamadora = document.getElementById('foramodal');
+
+    function abridora(){
+        chamadora.classList.add('fmodal');
+        foramodal.style.display = 'block';
+    }
+
+    function fechadora(){
+        chamadora.classList.remove('fmodal');
+        foramodal.style.display = 'none';
+        espaco.innerHTML = "";
+    }
+
+    // abaixo é a minha função para validar o cadastro
+    function enviar(){
+
+    var erros = validarcadastro();
+    espaco.innerHTML = "";
+
+    if(erros.length > 0){
+    for(var contador=0; contador < erros.length; contador++){
+        var erro = erros[contador];
+        var li = document.createElement("li");
+        li.innerHTML = erro;
+        espaco.appendChild(li);
+    }
+    }else{
+        espaco.innerHTML = "";
+        alert("Parabéns, seu cadastro foi realizado com sucesso!!")
+    }       
+    }
+
+    function validarcadastro(){
+    
+    var erros = [];
+
+    if(!nome.value){
+    erros.push("Favor preencher o nome!");
+    }
+
+    if(!email.value || (email.value.search("@") == -1)||(email.value.search(" ") >= '')){
+    erros.push("Favor preencher o email com '@' '.' e não colocar espaço.");
+    }
+
+    if(!senha.value || senha.value.length < 10){
+    erros.push("Favor inserir uma senha com no minimo 10 caracteres.")
+    }
+
+    return erros;
+    }   
+</script>

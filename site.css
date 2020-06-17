@@ -1,0 +1,266 @@
+body{
+    background-color:white;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-family: 'Sriracha', cursive;
+}
+html {
+    overflow-x: hidden ;
+}
+p{
+    font-size:18px ;
+    color: black;
+    text-shadow: black 1px 3px 10px; 
+}
+
+
+.fundo{
+  background-image: url("fundao.jpg");
+  height: 100%;
+
+  /* criar o parallax e o seu efeito */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Menu inicial */
+.cabecalho {
+    background-image: url(./fundao.jpg);
+    color:black;
+    width: 100%;
+    height: 80px;
+    font-size: 20px;
+}
+
+.lo{
+    float: left;
+    margin-left:120px;
+    margin-top: 10px;
+}
+
+
+
+.titulo {
+    margin-top: 10px;
+    float: left;
+    color: 	black;
+    margin: auto;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.comeco span{
+    color: black
+}
+.nav a {
+    margin-left: 100px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.nav {
+    float: right;
+    margin-right: 20px;
+}
+
+/* corpo do site*/
+/* mae é a div que contém todo o conteudo de cada filme */
+.mae{
+    width: 100%;
+    height: 200px;
+    margin-top: 150px;
+    display: flex;
+}
+/* abaixo são as config dakasmdokasd */
+
+
+
+
+
+
+
+/* essa abaixo são as classes para configurar os gifs dos filmes */
+.imagens_filmese img{ 
+    width: 250px;
+    height: 180px;
+    border-radius: 50px;
+    border: grey 3px solid;
+    margin-left: 100px;
+}
+
+.imagens_filmese {
+    float: left;
+    display: flex 1;
+}
+
+.imagens_filmesd img{ 
+    width: 250px;
+    height: 180px;
+    border-radius: 50px;
+    border: yellow 3px solid;
+    margin-right: 100px;
+}
+
+.imagens_filmesd{
+    float: right;
+    display: flex 1;
+}
+
+
+/* essa abaixo são as classes para configurar os textos dos filmes */
+
+span{
+    font-size:30px;
+}
+.textos_filmese{
+    width: 100%;
+    height: 100%;
+    margin-left: 20px;
+    margin-right: 100px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.textos_filmese span{
+    float: left;
+    color: darkred;
+}
+
+.textos_filmesd span{
+    float: right;
+    color: darkred;
+}
+
+
+
+.textos_filmese p{
+    padding-top: 1px;
+    margin-top: 0px;
+}
+
+.textos_filmesd{
+    width: 100%;
+    height: 100%;
+    margin-left: 100px;
+    margin-right: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.textos_filmesd p{
+    padding-top: 1px;
+    margin-top: 0px;
+}
+
+p#mulan {
+    margin-top: 20px;
+}
+
+/* essa class é para o rodape */
+.rodape{
+    width: 100%;
+    height: 70px;
+    background-image: url("fundao.jpg");
+    color: black;
+    margin-top: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+
+img#you { 
+    margin-top: 10px;
+    width: 80;
+    height: 40px;
+}
+
+img#insta {
+    margin-top: 10px;
+    width: 80;
+    height: 50px;
+    margin-left: 100px;
+}
+
+img#twi {
+    margin-top: 10px;
+    width: 80;
+    height: 50px;
+    margin-left: 100px;
+}
+
+
+
+/* abaixo as configurações da tela de cadastro */
+
+ul#espaco{
+    font-size: 15px;
+    color: white;
+    text-shadow: black 1px 3px 10px; 
+    border-radius: 10px;
+    background-color: #ff0000bf;
+}
+
+
+.input_bnt{
+    color: white;
+    background-color: blue;
+    font-weight: bold;
+    width: 60px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+ div#foramodal{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(44, 44, 44, 0.712);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.2s linear;
+    z-index: 20;
+} 
+
+.dmodal{
+    height: 100%;
+    width: 490px;
+    margin-top: 20px;
+    position: relative;
+    background-image: url(./fundocadastro.jpg);
+    text-shadow: black 1px 1px 2px;
+    font-size: 15px;
+    border: black solid 5px;
+    border-radius: 5px;
+}
+
+/* class para o cadastre-se aparecer */
+.fmodal{
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+span#x{
+    float: right;
+    padding-right: 35px;
+}
+
+.modal b{
+    font-size: 20px;
+}
+
+.intro p{
+    font-size: 17px;
+}
+.intro img{ 
+    width: 90px;
+    height: 90px;
+    padding-left: 80px;
+}
